@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fireworks Animation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+      
+      
+        #demo{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            color: white;
+        }
+        @font-face {
+            font-family: neon;
+            src: url(./neon_pixel-7.ttf);
+        }
+        .neon_text{
+            font-family: neon;
+            font-size: 5rem;
+            color:  #f40;
+            text-shadow:
+            -0.2rem -0.2rem 1rem #fff,
+            0.2rem 0.2rem 1rem #fff,
+            0 0 2rem #f40,
+            0 0 4rem #f40,
+            0 0 6rem #f40,
+            0 0 8rem #f40,
+            0 0 10rem #f40;
+        }
+    </style>
+</head>
+<body>
+    <div id="demo">
+        <div><button></button></div>
+        <div class="neon_text" onclick="fireworksShow()"><h1>Happy</h1><br><h1>Dussehra</h1></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="fireworks.js"></script>
+    <script>
+        function fireworksShow(){
+                   $('#demo').fireworks({ 
+                    sound: true, // sound effect
+                    opacity: 0.9, 
+                    width: '100%', 
+                    height: '100%' 
+                    });
+
+                $('.neon_text').toggle();
+        }
+    </script>
+
+
+</body>
+</html>
